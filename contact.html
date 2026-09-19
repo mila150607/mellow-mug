@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Mellow Mug</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">MELLOW MUG</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="order.html" class="order-btn">Order now</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Fill in the form below.</p>
+      <form id="contactForm">
+        <label>Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea id="message" rows="5" required></textarea><br><br>
+
+        <button type="submit" class="menu-btn">Send Message</button>
+      </form>
+      <p id="successMsg" style="color:green; display:none;">✅ Your message has been sent successfully!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Mellow Mug | Follow us on 
+      <a href="#">Instagram</a> • <a href="#">Facebook</a> • <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const successMsg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if(name && email && message) {
+        successMsg.style.display = "block";
+        form.reset();
+      } else {
+        alert("Please fill in all fields correctly.");
+      }
+    });
+  </script>
+</body>
+</html>

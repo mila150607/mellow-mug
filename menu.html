@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu - Mellow Mug</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">MELLOW MUG</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="order.html" class="order-btn">Order now</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Our Menu</h1>
+      <p>Pick your favourite coffee and add to cart.</p>
+    </div>
+  </section>
+
+  <!-- Menu Cards -->
+  <section class="menu-grid">
+    <div class="menu-card">
+      <img src="images/latte.jpeg" alt="Latte">
+      <h3>Latte</h3>
+      <p>Creamy and smooth</p>
+      <p><strong>RM 12.00</strong></p>
+      <button onclick="addToCart('Latte', 12)">Add to Cart</button>
+    </div>
+    <div class="menu-card">
+      <img src="images/espresso.jpeg" alt="Espresso">
+      <h3>Espresso</h3>
+      <p>Strong and bold</p>
+      <p><strong>RM 8.00</strong></p>
+      <button onclick="addToCart('Espresso', 8)">Add to Cart</button>
+    </div>
+    <div class="menu-card">
+      <img src="images/cappucino.jpeg" alt="Cappuccino">
+      <h3>Cappuccino</h3>
+      <p>Rich espresso with frothy milk</p>
+      <p><strong>RM 10.00</strong></p>
+      <button onclick="addToCart('Cappuccino', 10)">Add to Cart</button>
+    </div>
+    <div class="menu-card">
+      <img src="images/iced mocha.jpeg" alt="Mocha" height="390" width="200">
+      <h3>Mocha</h3>
+      <p>Chocolate meets coffee</p>
+      <p><strong>RM 14.00</strong></p>
+      <button onclick="addToCart('Mocha', 14)">Add to Cart</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Mellow Mug | Follow us on 
+      <a href="#">Instagram</a> • <a href="#">Facebook</a> • <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script>
+    function addToCart(item, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({item, price});
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(item + " added to cart!");
+    }
+  </script>
+</body>
+</html>

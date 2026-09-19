@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Mellow Mug</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">MELLOW MUG</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="order.html" class="order-btn">Order now</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Gallery Slideshow</h1>
+      <p>Enjoy our coffee moments in motion.</p>
+    </div>
+  </section>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/latteart.jpeg" alt="Latte Art" height="390" width="200">
+    </div>
+    <div class="slide fade">
+      <img src="images/espressoart.jpeg" alt="Espresso" height="390" width="200">
+    </div>
+    <div class="slide fade">
+      <img src="images/cappucinoart.jpeg" alt="Cappuccino Art" height="390" width="200">
+    </div>
+    <div class="slide fade">
+      <img src="images/mochaart.jpeg" alt="Mocha Art" height="390" width="200">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Mellow Mug | Follow us on 
+      <a href="#">Instagram</a> • <a href="#">Facebook</a> • <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.querySelectorAll(".slide");
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000); // tukar gambar setiap 3 saat
+    }
+  </script>
+</body>
+</html>

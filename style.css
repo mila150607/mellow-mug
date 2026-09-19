@@ -1,0 +1,359 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fdfbf7;
+  color: #2c3e35;
+}
+
+/* Navigation Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  color: #2c3e35;
+}
+.logo span {
+  color: #e67e22;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #2c3e35;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #e67e22;
+}
+.order-btn {
+  background-color: #e67e22;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.order-btn:hover {
+  background-color: #d35400;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+}
+.hero-text {
+  max-width: 50%;
+}
+.hero-text h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.hero-text .btn {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+.hero-text .btn:hover {
+  transform: scale(1.05);
+}
+.menu-btn {
+  background-color: #2c3e35;
+  color: white;
+}
+.learn-btn {
+  background-color: #e67e22;
+  color: white;
+}
+
+/* Coffee Cup Section */
+.hero-image {
+  position: relative;
+  background-color: #2c3e35;
+  border-radius: 20px;
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+.hero-image:hover {
+  transform: translateY(-5px);
+}
+.hero-image img {
+  width: 500px;
+  border-radius: 10px;
+}
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #e67e22;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .hero-image img {
+    width: 200px;
+  }
+}
+
+/*Gallery Section*/
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 60px;
+}
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+.lightbox-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 80%;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  top: 20px; right: 40px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+
+/*menu card and form*/
+/* Menu Grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 60px;
+}
+.menu-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+.menu-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Contact Form */
+form input, form textarea, form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  margin-top: 10px;
+}
+
+/*animation effect homepage */
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.hero-text h1, .hero-text p, .hero-text .btn {
+  animation: fadeIn 1s ease forwards;
+}
+.hero-text h1 { animation-delay: 0.2s; }
+.hero-text p { animation-delay: 0.4s; }
+.hero-text .btn { animation-delay: 0.6s; }
+
+.hero-image {
+  animation: slideIn 1s ease forwards;
+  animation-delay: 0.8s;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.hero-text h1, .hero-text p, .hero-text .btn {
+  animation: fadeIn 1s ease forwards;
+}
+.hero-text h1 { animation-delay: 0.2s; }
+.hero-text p { animation-delay: 0.4s; }
+.hero-text .btn { animation-delay: 0.6s; }
+
+.hero-image {
+  animation: slideIn 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/*contact*/
+input:invalid, textarea:invalid {
+  border: 2px solid red;
+}
+input:valid, textarea:valid {
+  border: 2px solid green;
+}
+
+.menu-card button {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.menu-card button:hover {
+  background-color: #d35400;
+}
+
+/* Footer sticky to bottom */
+/* Body & Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content flex supaya footer turun bawah */
+body > header, body > section, body > footer {
+  flex-shrink: 0;
+}
+body > section {
+  flex-grow: 1;
+}
+
+/* Footer sticky */
+footer {
+  background-color: #2c3e35;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto; /* ini yang buat footer sentiasa kat bawah */
+}
+footer a {
+  color: #e67e22;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #f39c12;
+}
+
+/*slideshow gallery*/
+/* Slideshow */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: 40px auto;
+}
+.slide {
+  display: none;
+}
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+.fade {
+  animation: fadeEffect 1s;
+}
+@keyframes fadeEffect {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* Sticky Footer */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+body > header, body > section, body > footer, body > div {
+  flex-shrink: 0;
+}
+body > section, body > div {
+  flex-grow: 1;
+}
+footer {
+  background-color: #2c3e35;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+footer a {
+  color: #e67e22;
+  text-decoration: none;
+  margin: 0 5px;
+}
+footer a:hover {
+  color: #f39c12;
+}
