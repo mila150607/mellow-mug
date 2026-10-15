@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Mellow Mug</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">MELLOW MUG</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="order.html" class="order-btn">Order now</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Gallery Slideshow</h1>
+      <p>Enjoy our coffee moments in motion.</p>
+    </div>
+  </section>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/latteart.jpeg" alt="Latte Art" height="390" width="200">
+    </div>
+    <div class="slide fade">
+      <img src="images/espressoart.jpeg" alt="Espresso" height="390" width="200">
+    </div>
+    <div class="slide fade">
+      <img src="images/cappucinoart.jpeg" alt="Cappuccino Art" height="390" width="200">
+    </div>
+    <div class="slide fade">
+      <img src="images/mochaart.jpeg" alt="Mocha Art" height="390" width="200">
+    </div>
+    <div class="slide fade">
+      <img src="images/flatwhiteart.jpeg" alt="Flat White Art" height="390" width="200">
+    </div>
+    <div class="slide fade">
+      <img src="images/machiatoart.jpeg" alt="Macchiato Art" height="390" width="200">
+    </div>
+  </div>
+
+  <section class="gallery-video">
+    <h2>Barista Shift</h2>
+    <div class="gallery-video-frame">
+      <iframe
+        src="https://www.youtube.com/embed/ezPQyB6iXg0"
+        title="POV- 4 hours of barista shift (compilation)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Final Project - Syarmila DDB0302. All rights reserved. For educational purposes only.
+    </p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.querySelectorAll(".slide");
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 3000); // tukar gambar setiap 3 saat
+    }
+  </script>
+</body>
+</html>
